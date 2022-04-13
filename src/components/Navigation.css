@@ -5,4 +5,17 @@
     color: white;
     display: flex;
     flex-direction: row;
+    flex: 1;
+    align-items: center;
+}
+.links{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    text-decoration: none;
+    /* align-items: center; */
+}
+a.links:hover, a.links:visited{
+    text-decoration: none;
 }

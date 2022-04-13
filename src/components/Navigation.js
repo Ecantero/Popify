@@ -8,9 +8,12 @@ export const Navigation = () => {
     <div class="container">
       <div class="logo">popify</div>
       <div class="links">
-        <ul>
-          <Link to="/">Dogs</Link>
-        </ul>
+        <div>
+          <Link to="/">Login</Link>
+        </div>
+        <div>
+          <Link to="/">Sign Up</Link>
+        </div>
       </div>
     </div>
   )
