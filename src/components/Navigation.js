@@ -9,7 +9,7 @@ export const Navigation = () => {
       <div class="logo">popify</div>
       <div class="links">
         <div>
-          <Link to="/">Login</Link>
+          <Link to="/Login">Login</Link>
         </div>
         <div>
           <Link to="/">Sign Up</Link>
