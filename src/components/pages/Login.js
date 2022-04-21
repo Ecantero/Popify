@@ -15,9 +15,9 @@ export function Login() {
         event.preventDefault();
 
         if(!/\w+@\w+\.\w+/.test(identifier)) {
-            setErrorMessage("Email and Passowrd do not match");
+            setErrorMessage("Email Invalid");
         } else if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(password)) {
-            setErrorMessage("Email and Password do not match");
+            setErrorMessage("Password Invalid");
         } else {
             const postData = {
                 identifier,
