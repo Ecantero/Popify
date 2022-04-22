@@ -16,9 +16,9 @@ export function Login() {
         event.preventDefault();
 
         if(!/\w+@\w+\.\w+/.test(identifier)) {
-            setErrorMessage("Email Invalid");
+            setErrorMessage("Email and Passowrd do not match");
         } else if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(password)) {
-            setErrorMessage("Password Invalid");
+            setErrorMessage("Email and Password do not match");
         } else {
             // UserPool.signUp(identifier, password, [], null, (err, data) => {
 
