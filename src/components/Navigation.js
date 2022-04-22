@@ -12,7 +12,7 @@ export const Navigation = () => {
           <Link to="/Login">Login</Link>
         </div>
         <div>
-          <Link to="/">Sign Up</Link>
+          <Link to="/Signup">Sign Up</Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
-export function Login() {
+export default function Login() {
     const [errorMessage, setErrorMessage] = useState('');
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
