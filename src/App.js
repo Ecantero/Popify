@@ -6,9 +6,6 @@ function App() {
   return (
       <div className="App">
         <Routing />
-        <footer>
-          <h5>FineApple</h5>
-        </footer>
       </div>
   );
 }
