@@ -5,11 +5,11 @@ import logo from '../assets/popify-logo.png';
 
 export const Navigation = () => {
   return (
-    <div class="container">
-      <div class="logo">
+    <div className="container">
+      <div className="logo">
         <img src={logo} alt="popify logo"/>
       </div>
-      <div class="links">
+      <div className="links">
         <div>
           <Link to="/Login">Login</Link>
         </div>
