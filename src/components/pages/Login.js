@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
-export function Login() {
+export default function Login() {
     const [errorMessage, setErrorMessage] = useState('');
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
@@ -15,9 +15,9 @@ export function Login() {
         event.preventDefault();
 
         if(!/\w+@\w+\.\w+/.test(identifier)) {
-            setErrorMessage("Email Invalid");
+            setErrorMessage("Email and Passowrd do not match");
         } else if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(password)) {
-            setErrorMessage("Password Invalid");
+            setErrorMessage("Email and Password do not match");
         } else {
             const postData = {
                 identifier,

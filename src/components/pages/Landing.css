@@ -1,3 +1,37 @@
+.landingPage-background {
+    background-color: #A52F21;
+    width: auto;
+    height: 100%;
+    background-size: cover;
+}
+
+.landingPage-background:before {
+    content:"";
+    background-color:#A52F21;
+    position: absolute;
+    height: 97.5%;
+    width: 100%;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 450%;
+}
+
+.songBox {
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    width: 80%;
+    padding-bottom: 22.6%;
+    background-color: #872F21;
+    border: 0px solid;
+    box-shadow: 0px 2px 0px #000000 inset;
+}
+
+/* Navbar Test */
 .container{
     background-color: #2E2B2B;
     /* width: 100%; */
@@ -12,7 +46,12 @@
 .logo{
     width: 80%;
     font-size: 3em;
-    
+    padding-left: 20px;
+}
+.logo > img{
+    width: 15%;
+    height: 15%;
+
 }
 .links{
     width: 20%;
