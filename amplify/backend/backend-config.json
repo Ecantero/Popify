@@ -1,1 +1,11 @@
-{}
+{
+  "auth": {
+    "popify": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
