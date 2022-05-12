@@ -1,0 +1,65 @@
+.homepage{
+    display: flex;
+}
+.home{
+    display: flex;
+    width: 80vw;
+    padding-left: 20vw;
+    background-color: #2E2B2B;
+    /* height: 100vh; */
+    flex-direction: column;
+}
+.spacer{
+    display: flex;
+    height: 10vh;
+    justify-content: flex-end;
+}
+.mini-spacer{
+    display: flex;
+    height: 5vh;
+    justify-content: flex-end;
+}
+.spacerHorizontal{
+    width: 5vw;
+    height: 1000%;
+}
+.userButton{
+    background-color: black;
+    width: 171px;
+    height: 26px;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.userIcon{
+    background-color: #A52F21;
+    width: 24px;
+    height: 24px;
+    border-radius: 15px;
+    margin-right: 5px;
+
+}
+
+.header1{
+    display: flex;
+    font-size: 70px;
+    color: #c4c4c4;
+    /* justify-content: ; */
+}
+.header2{
+    display: flex;
+    font-size: 30px;
+    color: #c4c4c4;
+    /* justify-content: center; */
+}
+.playedContainer{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #A52F21; */
+    width: 72vw;
+    flex-wrap: wrap;
+}
