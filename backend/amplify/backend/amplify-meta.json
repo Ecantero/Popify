@@ -1,0 +1,54 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify61aba7b7c4934-staging-143335-authRole",
+      "UnauthRoleArn": "arn:aws:iam::278132512965:role/amplify-amplify61aba7b7c4934-staging-143335-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::278132512965:role/amplify-amplify61aba7b7c4934-staging-143335-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-amplify61aba7b7c4934-staging-143335-deployment",
+      "UnauthRoleName": "amplify-amplify61aba7b7c4934-staging-143335-unauthRole",
+      "StackName": "amplify-amplify61aba7b7c4934-staging-143335",
+      "StackId": "arn:aws:cloudformation:us-west-1:278132512965:stack/amplify-amplify61aba7b7c4934-staging-143335/b23f4cd0-bfed-11ec-9155-02f626ce4133",
+      "AmplifyAppId": "d3021ujnmxl8cr"
+    }
+  },
+  "auth": {
+    "popify": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "us-west-1_ent7j7CLJ",
+        "UserPoolName": "Popify",
+        "AppClientID": "hlidni6ebgomr8jcsbkf0qroh",
+        "AppClientIDWeb": "hlidni6ebgomr8jcsbkf0qroh",
+        "IdentityPoolId": "us-west-1:6c50dedc-2773-4055-9ffd-2fe9a2d51d47",
+        "IdentityPoolName": "Popify-id-pool"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "lastPushTimeStamp": "2022-04-21T14:57:35.314Z"
+    }
+  }
+}
