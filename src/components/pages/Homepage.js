@@ -1,11 +1,42 @@
 import React from "react";
+import { Sidenav } from "../Sidenav";
+import { SongCard } from "../SongCard";
+import "./Homepage.css";
+
 
 export default function Home() {
     return(
+        
         <div className="homepage">
-            <h1>Good Morning</h1>
-            <h3>Recently Played</h3>
-            <h2>Songs</h2>
+            <Sidenav/>
+            <div className="spacerHorizontal"></div>
+            <div className="home">
+                <div className="header">
+                     <div className="userButton ">
+                         <div className='userIcon'></div>
+                         mirandashaekelley
+                    </div>
+                </div>
+                <div className="heading1">Good Morning, mirandashaekelley</div>
+                <div className="spacer"></div>
+                <div className="heading2">Recently Played</div>
+                <div className="mini-spacer"></div>
+                <div className="playedContainer">
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                    <SongCard/>
+                </div>
+                
+            </div>
+            
+            
         </div>
     )
 }

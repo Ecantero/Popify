@@ -1,0 +1,21 @@
+
+.searchBar{
+    background-color: black;
+    width: 371px;
+    height: 26px;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    margin: 15px 10px 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: auto;
+}
+.search-icon{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    /* display: none; */
+    
+}
