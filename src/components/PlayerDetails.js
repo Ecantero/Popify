@@ -3,15 +3,11 @@ import React from "react";
 function PlayerDetails(props) {
     return (
         <div className="music-player--details">
-            <div className="details-img">
-                <img className="details-img--image" src={props.song.img_src} alt={props.song.title} />
-            </div>
-            <div class="range"></div>
-            <div className="artist-info">
-                <h3 className="details-title">{props.song.title}</h3>
-                <h4 className="details-artist">{props.song.srtist}</h4>
-                <div class="line"></div>
-            </div>
+                <img className="details-img--image" src={props.song.img_src} alt={props.song.title} style={{ width: "4em", height: "auto" }}/>
+                <p>
+                    <b className="details-title">{props.song.title}</b>&nbsp; by&nbsp;
+                    <b className="details-artist">{props.song.artist}</b>
+                </p>
         </div>
     );
 }
