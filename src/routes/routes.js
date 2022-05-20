@@ -9,6 +9,7 @@ import Login from '../components/pages/Login';
 import Profile from '../components/pages/Profile';
 import Search from '../components/pages/Search';
 import Signup from '../components/pages/Signup';
+import Playlists from "../components/pages/Playlists";
 
 export function Routing(){
     return(
@@ -22,6 +23,7 @@ export function Routing(){
                 <Route path="/Profile" element={<Profile />}/>
                 <Route path="/Artist" element={<Artist />}/>
                 <Route path="/Details" element={<Details />}/>
+                <Route path='/Playlists' element={<Playlists/>}/>
             </Routes>
         </BrowserRouter>
     )

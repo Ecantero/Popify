@@ -42,3 +42,7 @@ img{
     overflow: hidden;
     
 }
+a, a:visited {
+    text-decoration: none;
+    color: white;
+}

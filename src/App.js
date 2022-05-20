@@ -162,7 +162,7 @@ useEffect(()=>{
  return (
     <div className="App">
       <Routing />
-      <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex} nextSongIndex={nextSongIndex} songs={songs} />
+      {/* <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex} nextSongIndex={nextSongIndex} songs={songs} /> */}
     </div>
   );
 }

@@ -7,7 +7,9 @@ export const Navigation = () => {
   return (
     <div className="container">
       <div className="logo">
-        <img src={logo} alt="popify logo"/>
+        <Link to="/">
+          <img src={logo} alt="popify logo" className='main-logo'/>
+        </Link>
       </div>
       <div className="links">
         <div>
