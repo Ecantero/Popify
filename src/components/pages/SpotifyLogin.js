@@ -6,9 +6,9 @@ const AUTH_URL =
 
 const SpotifyLogin = () => {
   return (
-      <div>
-          <a href={AUTH_URL}>Login with Spotify</a>
-      </div>
+    <div>
+      <a href={AUTH_URL}>Login with Spotify</a>
+    </div>
   );
 };
 
