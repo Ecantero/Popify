@@ -168,17 +168,17 @@ export default function Search() {
             <div className="spacerHorizontal"></div>
             <div className="home">
                 <div className="header">
-                    <div className="searchBar">
-                        <img alt='search icon' class='search-icon' src={searchicon}/>
-                    </div>
+                   <form className="searchBar">
+                        <input type="text" name="search" placeholder="Search.."/>
+                    </form>
                      <div className="userButton">
                          <div className='userIcon'></div>
-                         mirandashaekelley
+                         username
                     </div>
                 </div>
-                {/* <div className="heading1">Recent Searches</div>
-                <div className="spacer"></div> */}
-                <div className="heading2">Recent Searches</div>
+                <div className="heading1">Recent Searches</div>
+                <div className="spacer"></div>
+                <div className="heading2"></div>
                 <div className="mini-spacer"></div>
                 <div className="playedContainer">
                     <SongCard/>
