@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Navigation } from '../Navigation.js';
 import './Login.css';
+import {Player} from '../Player.js';
+
 export default function Login() {
     const [errorMessage, setErrorMessage] = useState('');
     const [identifier, setIdentifier] = useState('');
@@ -71,7 +73,7 @@ export default function Login() {
                         </div>
                     </form>
                 </div>
-            </div>    
+            </div>
         </div>
     )
 }
