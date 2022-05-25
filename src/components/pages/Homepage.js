@@ -169,10 +169,10 @@ export default function Home() {
                 <div className="header">
                      <div className="userButton ">
                          <div className='userIcon'></div>
-                         mirandashaekelley
+                         username
                     </div>
                 </div>
-                <div className="heading1">Good Morning, mirandashaekelley</div>
+                <div className="heading1">Good Morning, username</div>
                 <div className="spacer"></div>
                 <div className="heading2">Recently Played</div>
                 <div className="mini-spacer"></div>

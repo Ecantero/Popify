@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/popify-logo.png';
 import './Landing.css';
 import {Navigation} from '../Navigation.js';
+import { SongCard } from '../SongCard';
 
 export default function Landing() {
     return(
         
-        <div className='landingPage-background'>
+        <div className='landing-page'>
           <Navigation/>
-            <h3>Spotify, but worse...</h3>
-            <h1>Listen to these hit songs of the day!</h1>
-            <div className='songBox'>
-                <h4>Song Go Here</h4>
+          <div className='landing-container'>
+              <div className='landing-tagline'>Spotify, but worse...</div>
+              <div className='tagline'>Listen to these hit songs of the day!</div>
+              <div className='display'>
+                <SongCard/>
+                
             </div>
+        </div>
         </div>
     )
 }

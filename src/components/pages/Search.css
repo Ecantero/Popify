@@ -18,16 +18,10 @@
     padding: 2px;
     /* display: none; */
 }
-input[type=text] {
+.search-input {
     background-color: black;
     border: 1px solid black;
     width: 371px;
     height: 26px;
-    padding: 5px;
-    /* background-image: url('../../assets/searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-left: 40px; */
-    
-  }
+    padding: 5px;    
+}

@@ -10,13 +10,13 @@ import {
 function PlayerControls(props) {
     return (
         <div className="music-player--controls">
-            <button className="skip-btn" onClick={() => props.SkipSong(false)}>
+            <button className="skip-btn" onClick={() => props.SkipSong(false)} style={{ color: 'white' }}>
                 <FontAwesomeIcon icon={faBackward} />
             </button>
             <buton className="play-btn" onClick={() => props.setIsPlaying(!props.isPlaying)}>
                 <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
             </buton>
-            <button className="skip-btn" onClick={() => props.SkipSong()}>
+            <button className="skip-btn" onClick={() => props.SkipSong()} style={{ color: 'white' }}>
                 <FontAwesomeIcon icon={faForward} />
             </button>
         </div>

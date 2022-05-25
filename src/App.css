@@ -3,13 +3,15 @@
 
 .musicBar {
     position: fixed;
-    background-color: #A52F21;
+    background-color: black;
     margin-top: auto;
     margin-bottom: 0;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1;
+    font-size: 12px;
+    color: white;
 }
 
 .music-player--details {
@@ -70,7 +72,7 @@
 
 .play-btn:hover {
     transform: scale(1.1);
-    color: #2E2B2B;
+    color: white;
     opacity: 1;
     box-shadow: 0 6px 9px rgba(33, 33, 33, 0.1), 0 6px 16px rgba(33, 33, 33, 0.15);
 }
@@ -87,14 +89,14 @@
 }
 
 .skip-btn:focus {
-    color: #2E2B2B;
+    color: white;
     opacity: 1;
     box-shadow: 0 6px 9px rgba(33, 33, 33, 0.1), 0 6px 16px rgba(33, 33, 33, 0.15);
 }
 
 .skip-btn:hover {
     transform: scale(1.1);
-    color: #2E2B2B;
+    color: white;
     opacity: 1;
     box-shadow: 0 6px 9px rgba(33, 33, 33, 0.1), 0 6px 16px rgba(33, 33, 33, 0.15);
 }

@@ -169,7 +169,7 @@ export default function Search() {
             <div className="home">
                 <div className="header">
                    <form className="searchBar">
-                        <input type="text" name="search" placeholder="Search.."/>
+                        <input type="text" name="search" placeholder="Search.." className="search-input"/>
                     </form>
                      <div className="userButton">
                          <div className='userIcon'></div>
