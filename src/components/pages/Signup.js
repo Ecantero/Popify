@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import { Navigation } from '../Navigation.js';
+import './Signup.css';
+
 
 export default function Signup() {
     const [nameErrorMessage, setNameErrorMessage] = useState('');
@@ -49,29 +53,35 @@ export default function Signup() {
     
 
     return(
-        <div className="signup-wrap">
-            <h1>Sign Up</h1>
-            <form>
-                <label>
-                    <p>Username</p>
-                    <input type="text" />
-                </label>
-                <label>
-                    <p>Email</p>
-                    <input type="text" />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" />
-                </label>
-                <label>
-                    <p>Confirm Password</p>
-                    <input type="password" />
-                </label>
-                <div className="formBtn">
-                    <button className="btn solid primary" type="submit">Create Account</button>
-                </div>
-            </form>
+        <div className="signpPage">
+            <Navigation/>
+            <div className='formContainer'>
+              
+                    <div className='signup-wrap'>
+                        <div className='formTitle'>Sign Up</div>
+                            <form>
+                                <label>
+                                    <div className='formSubtitle'>Username</div>
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    <div className='formSubtitle'>Email</div>
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    <div className='formSubtitle'>Password</div>
+                                    <input type="password" />
+                                </label>
+                                <label>
+                                    <div className='formSubtitle'>Confirm Password</div>
+                                    <input type="password" />
+                                </label>
+                                <div className="formBtn">
+                                <div className="button" type="submit">Create Account</div>
+                                </div>
+                            </form>
+                    </div>    
+            </div>
         </div>
     )
 }
