@@ -25,7 +25,7 @@ export default function Home() {
             "track": "1",
             "year": "",
             "img_src": "./songs_images/[oops]_Cover (front)_e.jpg",
-            "src": "public/songs/[oops].mp3"
+            "src": "../../public/songs/[oops].mp3"
         },
         {
             "title": "5:32pm",
