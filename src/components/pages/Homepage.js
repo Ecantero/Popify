@@ -24,7 +24,7 @@ export default function Home() {
             "album": "[oops]",
             "track": "1",
             "year": "",
-            "img_src": "./songs_images/[oops]_Cover (front)_e.jpg",
+            // "img_src": "./songs_images/[oops]_Cover (front)_e.jpg",
             "src": "../../public/songs/[oops].mp3"
         },
         {
