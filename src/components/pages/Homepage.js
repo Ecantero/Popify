@@ -160,6 +160,16 @@ export default function Home() {
       });
     },[currentSongIndex])
 
+    const getTracks = () => {
+        fetch(`https://v1.nocodeapi.com/super_lemon21/spotify/VNDQWNQbbUyPRTpj/browse/featured`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            });
+    }
+
+    getTracks();
+
     return(
         
         <div className="homepage">
