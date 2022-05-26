@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import { Navigation } from '../Navigation.js';
+import './Login.css';
+import {Player} from '../Player.js';
 
 export default function Login() {
     const [errorMessage, setErrorMessage] = useState('');
@@ -49,22 +52,28 @@ export default function Login() {
     }
 
     return(
-        <div className="login-wrap">
-            <h1>Log In</h1>
-            <form onSubmit={postLogin}>
-                <label>
-                    <p>Username/Email</p>
-                    <input type="text" name="identifier" onInput={(event) => {setIdentifier(event.target.value);}} value={identifier} />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" name="password" onInput={(event) => {setPassword(event.target.value);}} value={password} />
-                    {errorMessage && <div className='error-message'> {errorMessage} </div>}
-                </label>
-                <div className="formBtn">
-                    <button onClick={handleClick} className="btn solid primary" type="submit">Log In</button>
+        <div className='loginPage'>
+            <Navigation/>
+            <div className='formContainer'>
+                
+                <div className="login-wrap">
+                    <div className='formTitle'>Login</div>
+                    <form onSubmit={postLogin}>
+                        <label>
+                            <div className='formSubtitle'>Username</div>
+                            <input type="text" name="identifier" onInput={(event) => {setIdentifier(event.target.value);}} value={identifier} />
+                        </label>
+                        <label>
+                            <div className='formSubtitle'>Password</div>
+                            <input type="password" name="password" onInput={(event) => {setPassword(event.target.value);}} value={password} />
+                            {errorMessage && <div className='error-message'> {errorMessage} </div>}
+                        </label>
+                        <div className="formBtn">
+                            <div onClick={handleClick} className="button" type="submit">Log In</div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     )
 }

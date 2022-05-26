@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {

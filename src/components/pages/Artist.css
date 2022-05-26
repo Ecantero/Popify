@@ -1,0 +1,12 @@
+.artistBanner{
+    background-image: url('../../assets/Lil-Uzi-Vert-Press.jpg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 82vw;
+    margin-left: -40px;
+    height: 50vh;
+    /* z-index: ; */
+    /* padding-left: 40px; */
+}

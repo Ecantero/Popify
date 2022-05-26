@@ -2,12 +2,11 @@ import React from "react";
 import {Player} from '../Player';
 import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
+import "./Playlists.css"
 import { SongCard } from "../SongCard";
-import searchicon from '../../assets/searchicon.png'
-import "./Search.css"
 
 
-export default function Search() {
+export default function Playlists() {
 
     const [songs,setSongs] = useState([
         {
@@ -161,22 +160,19 @@ export default function Search() {
       });
     },[currentSongIndex])
 
-    return(
-        <div className="search">
-            <div className="homepage">
+  return (
+        <div className="playlists">
+             <div className="homepage">
             <Sidenav/>
             <div className="spacerHorizontal"></div>
             <div className="home">
                 <div className="header">
-                   <form className="searchBar">
-                        <input type="text" name="search" placeholder="Search.."/>
-                    </form>
-                     <div className="userButton">
+                     <div className="userButton ">
                          <div className='userIcon'></div>
                          username
                     </div>
                 </div>
-                <div className="heading1">Recent Searches</div>
+                <div className="heading1">Playlists</div>
                 <div className="spacer"></div>
                 <div className="heading2"></div>
                 <div className="mini-spacer"></div>
@@ -191,7 +187,6 @@ export default function Search() {
                     <SongCard/>
                     <SongCard/>
                     <SongCard/>
-                    
                 </div>
                 
             </div>
@@ -200,5 +195,5 @@ export default function Search() {
         </div>
         <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex} nextSongIndex={nextSongIndex} songs={songs} />
         </div>
-    )
+  )
 }

@@ -1,5 +1,6 @@
 .homepage{
     display: flex;
+    min-height: 100vh;
 }
 .home{
     display: flex;
@@ -9,7 +10,7 @@
     /* height: 100vh; */
     flex-direction: column;
 }
-.spacer{
+.header{
     display: flex;
     height: 10vh;
     justify-content: flex-end;
@@ -20,7 +21,7 @@
     justify-content: flex-end;
 }
 .spacerHorizontal{
-    width: 5vw;
+    width: 2vw;
     height: 1000%;
 }
 .userButton{
@@ -43,14 +44,13 @@
     margin-right: 5px;
 
 }
-
-.header1{
+.heading1{
     display: flex;
     font-size: 70px;
     color: #c4c4c4;
     /* justify-content: ; */
 }
-.header2{
+.heading2{
     display: flex;
     font-size: 30px;
     color: #c4c4c4;
