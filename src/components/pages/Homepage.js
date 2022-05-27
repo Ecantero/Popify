@@ -3,6 +3,7 @@ import {Player} from '../Player';
 import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
 import { SongCard } from "../SongCard";
+import { Link } from "react-router-dom"
 import "./Homepage.css";
 
 
@@ -167,10 +168,10 @@ export default function Home() {
             <div className="spacerHorizontal"></div>
             <div className="home">
                 <div className="header">
-                     <div className="userButton ">
+                     <Link to="/AO/:aoId" className="userButton ">
                          <div className='userIcon'></div>
-                         username
-                    </div>
+                         usernameBruh
+                    </Link>
                 </div>
                 <div className="heading1">Good Morning, username</div>
                 <div className="spacer"></div>

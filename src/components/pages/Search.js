@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import {Player} from '../Player';
 import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
@@ -171,10 +172,10 @@ export default function Search() {
                    <form className="searchBar">
                         <input type="text" name="search" placeholder="Search.." className="search-input"/>
                     </form>
-                     <div className="userButton">
+                     <Link to="/AO/:aoId" className="userButton">
                          <div className='userIcon'></div>
                          username
-                    </div>
+                    </Link>
                 </div>
                 <div className="heading1">Recent Searches</div>
                 <div className="spacer"></div>

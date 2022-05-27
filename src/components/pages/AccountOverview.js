@@ -1,13 +1,9 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import React, {useState, useEffect} from "react";
 import {Player} from '../Player';
-import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
-import "./Playlists.css"
-import { SongCard } from "../SongCard";
+import './AccountOverview.css';
 
-
-export default function Playlists() {
+export default function AccountOverview() {
 
     const [songs,setSongs] = useState([
         {
@@ -161,40 +157,36 @@ export default function Playlists() {
       });
     },[currentSongIndex])
 
-  return (
-        <div className="playlists">
-             <div className="homepage">
+
+    return (
+        <div className="account-overview">
             <Sidenav/>
             <div className="spacerHorizontal"></div>
-            <div className="home">
+            <div className="ao">
                 <div className="header">
-                     <Link to="/AO/:aoId" className="userButton ">
-                         <div className='userIcon'></div>
-                         username
-                    </Link>
+                        <div className="userButton ">
+                            Log Out
+                        </div>
+                    </div>
+                <div className="user">
+                    <div className="pfp">Picture</div>
+                    <div className="profile">Profile</div>
+                    <div className="username">UserName</div>
                 </div>
-                <div className="heading1">Playlists</div>
-                <div className="spacer"></div>
-                <div className="heading2"></div>
-                <div className="mini-spacer"></div>
-                <div className="playedContainer">
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
+                <div className="userActivity">
+                    <div className="topArtist">
+                        <div className="topArtist">Top Artist this Month</div>
+                        <div className="artVis">Only Visible to You</div>
+                        <div className="songCard">Song+Picture</div>
+                    </div>
+                    <div className="topTracks">
+                        <div className="topTrack">Top Tracks this Month</div>
+                        <div className="trackVis">Only Visible to You</div>
+                        <div className="songList">Song List</div>
+                    </div>
                 </div>
-                
             </div>
-            
-            
-        </div>
-        <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex} nextSongIndex={nextSongIndex} songs={songs} />
-        </div>
-  )
+            <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex} nextSongIndex={nextSongIndex} songs={songs} />        
+            </div>
+    )
 }
