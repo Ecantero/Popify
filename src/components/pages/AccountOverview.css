@@ -1,0 +1,13 @@
+.ao {
+    display: flex;
+    width: 80vw;
+    padding-left: 20vw;
+    background-color: #2E2B2B;
+    /* height: 100vh; */
+    flex-direction: column;
+}
+
+.spacerHorizontal{
+    width: 2vw;
+    height: 1000%;
+}
