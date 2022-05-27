@@ -1,6 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap");
-
+.App{
+    height: 100%;
+    width: 100%;
+}
 .musicBar {
     position: fixed;
     background-color: black;
@@ -149,7 +152,7 @@
 
 .container{
     background-color: #2E2B2B;
-    width: 100%;
+    width: 80%;
     height: 15vh;
     color: white;
     display: flex;

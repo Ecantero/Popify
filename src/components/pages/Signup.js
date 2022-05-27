@@ -53,7 +53,7 @@ export default function Signup() {
     
 
     return(
-        <div className="signpPage">
+        <div className="signup-page">
             <Navigation/>
             <div className='formContainer'>
               

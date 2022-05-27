@@ -9,16 +9,41 @@
     padding: 10px;
     cursor: pointer;
 }
+.card:hover{
+    background-color: #534e4e;
+    transition: .5s ease;
+}
+
 .songArt{
     margin: auto;
     height: 70%;
     max-height: 70%;
 }
-img{
+.song-img{
     border-radius: 15px;
     width: 200px;
     height: 200px;
     padding: 10px;
+    z-index:1;
+    /* position: absolute; */
+}
+
+.play-overlay {
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    padding: 165px 0px 0px 0px;
+    margin-left: -55px;
+    top: unset;
+    /* top: 0; */
+    /* right: 0; */
+    position: absolute;
+    /* left: 10px; */
+    display: none;
+}
+.card:hover .play-overlay {
+    display: initial;
+    transition: all .5s ease;
 }
 .songTitle{
     font-size: 20px;
@@ -40,8 +65,8 @@ img{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    
 }
+
 a, a:visited {
     text-decoration: none;
     color: white;

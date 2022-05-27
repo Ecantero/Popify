@@ -15,7 +15,8 @@ export default function Landing() {
               <div className='tagline'>Listen to these hit songs of the day!</div>
               <div className='display'>
                 <SongCard/>
-                
+                <SongCard/>
+                <SongCard/>
             </div>
         </div>
         </div>

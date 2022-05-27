@@ -11,18 +11,18 @@ export const Sidenav = (props) => {
         <div className='sidenav'>
 
             <div className='settings'>
-                <img alt='settings icon' class='icon' src={settingsicon} />
+                <img alt='settings icon' class='icon-sidebar' src={settingsicon} />
             </div>
             <div class='list-nav'>
-            <Link to="/home"><img alt='home icon' class='icon' src={homeicon}/></Link>
+            <Link to="/home"><img alt='home icon' class='icon-sidebar' src={homeicon}/></Link>
                 <Link to="/home">home</Link>
             </div>
             <div class='list-nav'>
-            <Link to="/search"><img alt='search icon' class='icon' src={searchicon}/></Link>
+            <Link to="/search"><img alt='search icon' class='icon-sidebar' src={searchicon}/></Link>
                 <Link to="/search">search</Link>
             </div>
             <div class='list-nav'>
-                <Link to="/playlists"><img alt='playlist icon' class='icon' src={playlisticon} /></Link>
+                <Link to="/playlists"><img alt='playlist' class='icon-sidebar' src={playlisticon} /></Link>
                 <Link to="/playlists">playlists</Link>
             </div>
             
