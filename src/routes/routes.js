@@ -10,7 +10,7 @@ import Landing from '../components/pages/Landing';
 import Login from '../components/pages/Login';
 import Profile from '../components/pages/Profile';
 import Search from '../components/pages/Search';
-import Signup from '../components/pages/Signup';
+// import Signup from '../components/pages/Signup';
 import Playlists from "../components/pages/Playlists";
 
 export function Routing(){
@@ -27,7 +27,7 @@ export function Routing(){
 
                 <Route path="/" element={<Landing />}/>
                 <Route path="/Login" element={<Login />}/>
-                <Route path="/Signup" element={<Signup />}/>
+                {/* <Route path="/Signup" element={<Signup />}/> */}
             </Routes>
         </BrowserRouter>
     )

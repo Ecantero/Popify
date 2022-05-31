@@ -6,6 +6,7 @@ import { Sidenav } from "../Sidenav";
 import { SongCard } from "../SongCard";
 import searchicon from '../../assets/searchicon.png'
 import "./Search.css"
+import { Authenticator } from "@aws-amplify/ui-react";
 
 
 export default function Search() {
@@ -172,10 +173,16 @@ export default function Search() {
                    <form className="searchBar">
                         <input type="text" name="search" placeholder="Search.." className="search-input"/>
                     </form>
-                     <Link to="/AO/:aoId" className="userButton">
-                         <div className='userIcon'></div>
-                         username
-                    </Link>
+                    <Authenticator>
+                        {({ signOut, user }) => (
+                            <div className="header">
+                                <Link to="/AO/:aoId" className="userButton ">
+                                    <div className='userIcon'></div>
+                                    {user.attributes.email}
+                                </Link>
+                            </div>  
+                        )}
+                    </Authenticator>
                 </div>
                 <div className="heading1">Recent Searches</div>
                 <div className="spacer"></div>

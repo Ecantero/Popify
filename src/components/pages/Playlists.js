@@ -5,6 +5,12 @@ import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
 import "./Playlists.css"
 import { SongCard } from "../SongCard";
+import { Amplify } from 'aws-amplify';
+import { Authenticator } from '@aws-amplify/ui-react'
+
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../../aws-exports'
+Amplify.configure(awsExports);
 
 
 export default function Playlists() {
@@ -167,12 +173,16 @@ export default function Playlists() {
             <Sidenav/>
             <div className="spacerHorizontal"></div>
             <div className="home">
-                <div className="header">
+            <Authenticator>
+            {({ signOut, user }) => (
+                 <div className="header">
                      <Link to="/AO/:aoId" className="userButton ">
                          <div className='userIcon'></div>
-                         username
+                         {user.attributes.email}
                     </Link>
-                </div>
+                </div>  
+            )}
+            </Authenticator>
                 <div className="heading1">Playlists</div>
                 <div className="spacer"></div>
                 <div className="heading2"></div>
