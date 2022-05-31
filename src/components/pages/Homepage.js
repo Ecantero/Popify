@@ -5,6 +5,12 @@ import { Sidenav } from "../Sidenav";
 import { SongCard } from "../SongCard";
 import { Link } from "react-router-dom"
 import "./Homepage.css";
+import { Amplify } from 'aws-amplify';
+import { Authenticator } from '@aws-amplify/ui-react'
+
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../../aws-exports'
+Amplify.configure(awsExports);
 
 
 export default function Home() {
@@ -167,13 +173,23 @@ export default function Home() {
             <Sidenav/>
             <div className="spacerHorizontal"></div>
             <div className="home">
-                <div className="header">
+            <Authenticator>
+            {({ signOut, user }) => (
+                 <div className="header">
                      <Link to="/AO/:aoId" className="userButton ">
                          <div className='userIcon'></div>
-                         usernameBruh
+                         {user.attributes.email}
                     </Link>
-                </div>
-                <div className="heading1">Good Morning, username</div>
+                </div>  
+            )}
+            </Authenticator>
+                
+            
+                <Authenticator>
+                {({ signOut, user }) => (
+                   <div className="heading1">Good Morning, {user.attributes.email}</div> 
+                )}
+                </Authenticator>
                 <div className="spacer"></div>
                 <div className="heading2">Recently Played</div>
                 <div className="mini-spacer"></div>

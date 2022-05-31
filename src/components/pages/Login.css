@@ -1,3 +1,7 @@
+.loginPage{
+    width: 100%;
+    overflow-x: hidden;
+}
 .formContainer{
     display: flex;
     height: 85vh;
@@ -5,17 +9,21 @@
     justify-content: center;
     align-items: center;
     background-color: #A52F21;
+   
+}
+.authenticator{
+    margin: 50px 0px 0px 0px;
 }
 .login-wrap{
-    margin-top: -50px;
+    margin-top: 10px;
     background-color: #CCCCCC;
-    height: 339px;
+    height: 239px;
     width: 394px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 55px 15px 15px 15px;
+    padding: 35px 15px 35px 15px;
 }
 .formTitle{
     font-size: 24px;

@@ -3,58 +3,82 @@ import { Navigate } from 'react-router-dom';
 import { Navigation } from '../Navigation.js';
 import './Login.css';
 import {Player} from '../Player.js';
+// import Amplify from 'aws-amplify';
+// import awsconfig from './aws-exports';
+// import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react'
+
+// Amplify.configure(awsconfig);
+
+import { Amplify } from 'aws-amplify';
+import { Authenticator } from '@aws-amplify/ui-react'
+
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../../aws-exports'
+Amplify.configure(awsExports);
 
 export default function Login() {
-    const [errorMessage, setErrorMessage] = useState('');
-    const [identifier, setIdentifier] = useState('');
-    const [password, setPassword] = useState('');
-    const [redirect, setRedirect] = useState(false);
+    // const [errorMessage, setErrorMessage] = useState('');
+    // const [identifier, setIdentifier] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [redirect, setRedirect] = useState(false);
 
-    const handleClick = () => {
-        setErrorMessage("Email and Password do not match");
-    }
+    // const handleClick = () => {
+    //     setErrorMessage("Email and Password do not match");
+    // }
 
-    const postLogin = event => {
-        event.preventDefault();
+    // const postLogin = event => {
+    //     event.preventDefault();
 
-        if(!/\w+@\w+\.\w+/.test(identifier)) {
-            setErrorMessage("Email and Passowrd do not match");
-        } else if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(password)) {
-            setErrorMessage("Email and Password do not match");
-        } else {
-            const postData = {
-                identifier,
-                password
-            }
-            fetch("/* api */", {
-                method: 'POST',
-                credentials: 'include',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(postData)
+    //     if(!/\w+@\w+\.\w+/.test(identifier)) {
+    //         setErrorMessage("Email and Passowrd do not match");
+    //     } else if(!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(password)) {
+    //         setErrorMessage("Email and Password do not match");
+    //     } else {
+    //         const postData = {
+    //             identifier,
+    //             password
+    //         }
+    //         fetch("/* api */", {
+    //             method: 'POST',
+    //             credentials: 'include',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(postData)
 
-            }).then (response => {
-                console.log(response);
-                if(response.ok) {
-                    /* auth check */
-                }
-                else {
-                    setErrorMessage("Credentials not found.")
-                }
-            });
-        }
-    }
-    if(redirect) {
-        return(
-            <Navigate to="/" />
-        )
-    }
+    //         }).then (response => {
+    //             console.log(response);
+    //             if(response.ok) {
+    //                 /* auth check */
+    //             }
+    //             else {
+    //                 setErrorMessage("Credentials not found.")
+    //             }
+    //         });
+    //     }
+    // }
+    // if(redirect) {
+    //     return(
+    //         <Navigate to="/" />
+    //     )
+    // }
 
     return(
         <div className='loginPage'>
             <Navigation/>
             <div className='formContainer'>
+             <Authenticator className='authenticator'>
+                {({ signOut, user }) => (
+
+                    <main>
+                    <h1>Hello {user.attributes.email}</h1>
+                    <button onClick={signOut}>Sign out</button>
+                    </main>
+                )}
+            </Authenticator>   
+            </div>
+            
+            {/* <div className='formContainer'>
                 
                 <div className="login-wrap">
                     <div className='formTitle'>Login</div>
@@ -73,7 +97,7 @@ export default function Login() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> */}
         </div>
-    )
+    );
 }
