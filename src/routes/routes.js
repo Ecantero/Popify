@@ -18,12 +18,13 @@ export function Routing(){
         <BrowserRouter>
             <Routes>
                 <Route path="/Home" element={<Homepage />}/>
+                <Route path="AO/:aoId" element={<AccountOverview />} />
                 <Route path="/Search" element={<Search />}/>
                 <Route path="/Profile" element={<Profile />}/>
                 <Route path="/Artist" element={<Artist />}/>
                 <Route path="/Details" element={<Details />}/>
                 <Route path="/Playlists" element={<Playlists />}/>
-                <Route path="AO/:aoId" element={<AccountOverview />} />
+
                 <Route path="/" element={<Landing />}/>
                 <Route path="/Login" element={<Login />}/>
                 <Route path="/Signup" element={<Signup />}/>

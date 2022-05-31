@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {Player} from '../Player';
 import { Sidenav } from "../Sidenav";
+import { SongCard } from "../SongCard";
+import { SongList } from "../SongList";
 import './AccountOverview.css';
 
 export default function AccountOverview() {
@@ -169,20 +171,35 @@ export default function AccountOverview() {
                         </div>
                     </div>
                 <div className="user">
-                    <div className="pfp">Picture</div>
-                    <div className="profile">Profile</div>
-                    <div className="username">UserName</div>
+                    <div className="pfp"></div>
+                    <div className="proName">
+                        <div className="profile">Profile</div>
+                        <div className="username">UserName</div>
+                    </div>
                 </div>
                 <div className="userActivity">
                     <div className="topArtist">
-                        <div className="topArtist">Top Artist this Month</div>
+                        <div className="topArtist"><h1>Top Artist this Month</h1></div>
                         <div className="artVis">Only Visible to You</div>
-                        <div className="songCard">Song+Picture</div>
+                        <div className="songCards">
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                            <SongCard />
+                        </div>
                     </div>
                     <div className="topTracks">
-                        <div className="topTrack">Top Tracks this Month</div>
+                        <div className="topTrack"><h1>Top Tracks this Month</h1></div>
                         <div className="trackVis">Only Visible to You</div>
-                        <div className="songList">Song List</div>
+                        <div className="songList">
+                            <div className="songItem"><h4>1.</h4> <SongList /><h5>1,000,000</h5></div>
+                            <div className="songItem"><h4>2.</h4> <SongList /><h5>1,000,000</h5></div>
+                            <div className="songItem"><h4>3.</h4> <SongList /><h5>1,000,000</h5></div>
+                            <div className="songItem"><h4>4.</h4> <SongList /><h5>1,000,000</h5></div>
+                            <div className="songItem"><h4>5.</h4> <SongList /><h5>1,000,000</h5></div>
+                        </div>
                     </div>
                 </div>
             </div>

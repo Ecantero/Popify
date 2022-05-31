@@ -5,9 +5,64 @@
     background-color: #2E2B2B;
     /* height: 100vh; */
     flex-direction: column;
+    color: white;
+    padding-bottom: 75px;
 }
 
 .spacerHorizontal{
     width: 2vw;
     height: 1000%;
+}
+
+.songCards {
+    display: flex;
+    flex-direction: row;
+    /* background-color: #A52F21; */
+    width: 72vw;
+    flex-wrap: wrap;
+}
+
+.songItem {
+    display: flex;
+    flex-direction: row;
+}
+
+h4 {
+    padding-top: 24px;
+}
+
+h5 {
+    padding-top: 26px;
+    padding-left: 100px;
+}
+
+.user {
+    display: flex; 
+    flex-direction: row;
+    padding-bottom: 50px;
+    border-bottom: 2px solid black;
+}
+
+.pfp {
+  height: 250px;
+  width: 250px;
+  margin-right: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.profile {
+    margin-top: 25px;
+    font-size: 50px;
+}
+
+.username {
+    margin-top: 10px;
+    font-size: 100px;
+}
+
+.proName {
+    display: flex;
+    flex-direction: column;
 }

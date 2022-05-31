@@ -53,7 +53,7 @@ function Player(props) {
                             <audio src={props.songs[props.currentSongIndex].src} ref={audioElement}></audio>
                             <PlayerControls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
                             <div className="upcomingsong">
-                            <img src={props.songs[props.nextSongIndex].img_src} alt={props.songs[props.nextSongIndex].title} style={{ width: "4em", height: "auto" }} />
+                            <img src={props.songs[props.nextSongIndex].img_src} alt={props.songs[props.nextSongIndex].title} crossOrigin="anonymous" style={{ width: "4em", height: "auto" }} />
                         <p>
                             <b>{props.songs[props.nextSongIndex].title} </b>&nbsp; by&nbsp;
                             <b>{props.songs[props.nextSongIndex].artist}</b>
