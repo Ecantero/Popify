@@ -4,7 +4,7 @@
 }
 .home{
     display: flex;
-    width: 80vw;
+    width: 100%;
     padding-left: 20vw;
     background-color: #2E2B2B;
     /* height: 100vh; */
@@ -26,8 +26,8 @@
 }
 .userButton{
     background-color: black;
-    width: 171px;
-    height: 26px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 15px;
     color: white;
     padding: 10px;

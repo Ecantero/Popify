@@ -50,7 +50,7 @@
     color: #ffffff;
     height: 10%;
     max-height: 10%;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

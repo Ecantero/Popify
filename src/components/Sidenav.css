@@ -27,7 +27,7 @@
     align-items: center;
 }
 .list-nav > a{
-    /* margin-left: 40px; */
+    margin-left: 10px;
     font-size: 1em;
 }
 .list-nav > a:visited{
@@ -36,5 +36,5 @@
 .icon-sidebar{
     width: 30px;
     height: 30px;
-    padding: 5px 10px 5px 5px;
+    /* padding: 5px 10px 5px 5px; */
 }
