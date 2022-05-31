@@ -153,18 +153,18 @@ export default function Home() {
     },
   ]);
 
-  const code = new URLSearchParams(window.location.search).get("code")
-//   const { code } = useParams();
+  const code = new URLSearchParams(window.location.search).get("code");
+  // const { code } = useParams();
   console.log(code);
   const accessToken = useAuth(code);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
-  useEffect(() => {
-    if (!accessToken) return;
-    spotifyApi.setAccessToken(accessToken);
-  }, [accessToken]);
+  // useEffect(() => {
+  //   if (!accessToken) return;
+  //   spotifyApi.setAccessToken(accessToken);
+  // }, [accessToken]);
 
   useEffect(() => {
     setNextSongIndex(() => {
@@ -221,7 +221,7 @@ export default function Home() {
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
         songs={songs}
-        accessToken={accessToken}
+        // accessToken={accessToken}
       />
     </div>
   );
