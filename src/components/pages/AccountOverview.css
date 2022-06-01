@@ -1,6 +1,6 @@
 .ao {
     display: flex;
-    width: 80vw;
+    /* width: 80vw; */
     padding-left: 20vw;
     background-color: #2E2B2B;
     /* height: 100vh; */
@@ -44,9 +44,9 @@ h5 {
 }
 
 .pfp {
-  height: 250px;
-  width: 250px;
-  margin-right: 50px;
+  height: 150px;
+  width: 150px;
+  margin-right: 25px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -54,12 +54,12 @@ h5 {
 
 .profile {
     margin-top: 25px;
-    font-size: 50px;
+    font-size: 24px;
 }
 
 .username {
     margin-top: 10px;
-    font-size: 100px;
+    font-size: 40px;
 }
 
 .proName {

@@ -1,9 +1,16 @@
 import React, {useState, useEffect} from "react";
-import {Player} from '../Player';
+import { Player} from '../Player';
 import { Sidenav } from "../Sidenav";
 import { SongCard } from "../SongCard";
 import { SongList } from "../SongList";
 import './AccountOverview.css';
+import { Amplify } from 'aws-amplify';
+import { Authenticator } from '@aws-amplify/ui-react';
+import profileimg from '../../assets/profile-icon.png';
+
+import '@aws-amplify/ui-react/styles.css';
+import awsExports from '../../aws-exports'
+Amplify.configure(awsExports);
 
 export default function AccountOverview() {
 
@@ -166,15 +173,27 @@ export default function AccountOverview() {
             <div className="spacerHorizontal"></div>
             <div className="ao">
                 <div className="header">
-                        <div className="userButton ">
+                    <Authenticator>
+                        {({signOut, user}) =>(
+                           <div className="userButton" onClick={signOut}>
                             Log Out
-                        </div>
+                            </div>  
+                        )}
+                    </Authenticator>
+                       
                     </div>
                 <div className="user">
-                    <div className="pfp"></div>
+                    {/* <div className="pfp"> */}
+                        <img alt="profile picture" src={profileimg} className="pfp"></img>
+                    {/* </div> */}
                     <div className="proName">
                         <div className="profile">Profile</div>
-                        <div className="username">UserName</div>
+                        <Authenticator>
+                        {({ signOut, user }) => (
+                           <div className="username">{user.attributes.email}</div> 
+                        )}
+                        </Authenticator>
+                        
                     </div>
                 </div>
                 <div className="userActivity">
@@ -182,9 +201,6 @@ export default function AccountOverview() {
                         <div className="topArtist"><h1>Top Artist this Month</h1></div>
                         <div className="artVis">Only Visible to You</div>
                         <div className="songCards">
-                            <SongCard />
-                            <SongCard />
-                            <SongCard />
                             <SongCard />
                             <SongCard />
                             <SongCard />
