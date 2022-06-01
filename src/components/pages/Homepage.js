@@ -160,15 +160,25 @@ export default function Home() {
       });
     },[currentSongIndex])
 
-    const getTracks = () => {
-        fetch(`https://v1.nocodeapi.com/super_lemon21/spotify/VNDQWNQbbUyPRTpj/browse/featured`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            });
+    // const getTracks = () => {
+    //     fetch(`https://v1.nocodeapi.com/super_lemon21/spotify/VNDQWNQbbUyPRTpj/browse/featured`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //         });
+    // }
+
+    // getTracks();
+
+    const getDynamoTrack = () => {
+        fetch('.../backend/dynamo/getItem.js')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        });
     }
 
-    getTracks();
+    getDynamoTrack();
 
     return(
         

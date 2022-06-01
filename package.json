@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/cli": "^8.0.2",
+    "@aws-sdk/client-dynamodb": "^3.100.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
