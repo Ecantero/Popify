@@ -24,8 +24,8 @@ const App=()=> {
 
  return (
     <div className="App">
-      <button onClick={() => fetchDataFormDynamoDb()}> Fetch </button>
-      <button onClick={() => addDataToDynamoDB()}> Put </button>
+      {/* <button onClick={() => fetchDataFormDynamoDb()}> Fetch </button>
+      <button onClick={() => addDataToDynamoDB()}> Put </button> */}
       <Routing />
     </div>
   );
