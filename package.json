@@ -12,10 +12,12 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "aws-amplify": "^4.3.24",
+    "aws-sdk": "^2.1146.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.0",
+    "util": "^0.12.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
