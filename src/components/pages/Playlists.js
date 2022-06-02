@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Link} from "react-router-dom"
 import {Player} from '../Player';
@@ -5,6 +6,7 @@ import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
 import "./Playlists.css"
 import { SongCard } from "../SongCard";
+import  addimg from "../../assets/add-icon.png";
 import { Amplify } from 'aws-amplify';
 import { Authenticator } from '@aws-amplify/ui-react'
 
@@ -169,7 +171,7 @@ export default function Playlists() {
 
   return (
         <div className="playlists">
-             <div className="homepage">
+             <div className="homepage full-width">
             <Sidenav/>
             <div className="spacerHorizontal"></div>
             <div className="home">
@@ -187,17 +189,11 @@ export default function Playlists() {
                 <div className="spacer"></div>
                 <div className="heading2"></div>
                 <div className="mini-spacer"></div>
-                <div className="playedContainer">
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
+                <div className="createPlaylist">
+                    <div className="create-button">
+                        <img alt='add playlist' className="add-icon" src={addimg}></img>
+                        create a playlist
+                    </div>
                 </div>
                 
             </div>

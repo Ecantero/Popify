@@ -1,0 +1,24 @@
+.full-width{
+    height: 100vh;
+    overflow-y: hidden;
+}
+.create-button{
+    height: fit-content;
+    width: 200px;
+    background-color: darkred;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.create-button:hover{
+    background-color: black;
+    transition: .5s ease;
+}
+.create-button > img{
+    width: 30px;
+    height: 30px;
+}

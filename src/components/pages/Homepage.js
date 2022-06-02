@@ -15,6 +15,19 @@ Amplify.configure(awsExports);
 
 export default function Home() {
 
+    const master_list = [
+        {id: 1, image: '/Cover_$orries.jpg', title: '$orries', artist: 'Peachy!' },
+        {id: 2, image: '/Cover_oops.jpg', title: '[oops]', artist: 'potsu'},
+        {id: 3, image: '/Cover_532.jpg', title: '5:32pm', artist: 'The Deli'},
+        {id: 4, image: '/Cover_88.jpg', title: '88 keys', artist: 'Oatmello'},
+        {id: 5, image: '/Cover_Affection.jpg', title: 'Affection', artist: 'Jinsang' },
+        {id: 6, image: '/Cover_Again.jpg', title: 'Again', artist: 'Wun Two'},
+        {id: 7, image: '/Cover_Alone.jpg', title: 'Alone and Lonely', artist: 'prxz'},
+        {id: 8, image: '/Cover_532.jpg', title: '5:32pm', artist: 'Oatmello'},
+        {id: 9, image: '/Cover_Baby.jpg', title: "Baby You're Worth It", artist: 'Kina'},
+        {id: 10, image: '/Cover_Backpack.jpg', title: 'Backpack City', artist: 'Flovry'}
+    ]
+
     const [songs,setSongs] = useState([
         {
             "title": "$orries",
@@ -191,19 +204,26 @@ export default function Home() {
                 )}
                 </Authenticator>
                 <div className="spacer"></div>
-                <div className="heading2">Recently Played</div>
+                <div className="heading2">Recommended</div>
                 <div className="mini-spacer"></div>
                 <div className="playedContainer">
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
-                    <SongCard/>
+                {master_list.map(({id, image, title, artist}) => (
+                
+                <div className='card' key={id}> 
+                <div className='songArt'>
+                <img alt="Cover Art" className='song-img' src={process.env.PUBLIC_URL + image}></img>
+                
+                </div>
+                <div className='songTitle'><Link to='/Song'>{title}</Link></div>
+                
+                <div className='songArtist'><Link to='/Artist'>{artist}</Link></div>
+                
+                </div>
+                 ))}
+                
+                
+                
+                <div className="padding"></div>
                 </div>
                 
             </div>

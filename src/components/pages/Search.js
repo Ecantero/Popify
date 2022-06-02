@@ -4,8 +4,9 @@ import {Player} from '../Player';
 import {useState,useEffect} from "react";
 import { Sidenav } from "../Sidenav";
 import { SongCard } from "../SongCard";
-import searchicon from '../../assets/searchicon.png'
+// import searchicon from '../../assets/searchicon.png'
 import "./Search.css"
+import sorries from "../../assets/Cover_$orries.jpg";
 import { Authenticator } from "@aws-amplify/ui-react";
 
 
@@ -168,10 +169,10 @@ export default function Search() {
             <div className="homepage">
             <Sidenav/>
             <div className="spacerHorizontal"></div>
-            <div className="home">
+            <div className="home full-width">
                 <div className="header">
                    <form className="searchBar">
-                        <input type="text" name="search" placeholder="Search.." className="search-input"/>
+                        <input type="text" name="search" placeholder="Search.."/>
                     </form>
                     <Authenticator>
                         {({ signOut, user }) => (
@@ -189,6 +190,9 @@ export default function Search() {
                 <div className="heading2"></div>
                 <div className="mini-spacer"></div>
                 <div className="playedContainer">
+                
+
+                    {/* <SongCard/>
                     <SongCard/>
                     <SongCard/>
                     <SongCard/>
@@ -198,8 +202,7 @@ export default function Search() {
                     <SongCard/>
                     <SongCard/>
                     <SongCard/>
-                    <SongCard/>
-                    
+                     */}
                 </div>
                 
             </div>

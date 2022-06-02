@@ -182,3 +182,81 @@ a, a:visited{
   text-decoration: none; 
   color: white; 
 }
+
+.card{
+    display:flex;
+    flex-direction: column;
+    width: 221px;
+    height: 300px;
+    background-color: #383535;
+    border-radius: 10px;
+    margin: 15px 15px 15px 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: #534e4e;
+    transition: .5s ease;
+}
+
+.songArt{
+    margin: auto;
+    height: 70%;
+    max-height: 70%;
+}
+.song-img{
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    z-index:1;
+    /* position: absolute; */
+}
+
+.play-overlay {
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    padding: 165px 0px 0px 0px;
+    margin-left: -55px;
+    top: unset;
+    /* top: 0; */
+    /* right: 0; */
+    position: absolute;
+    /* left: 10px; */
+    display: none;
+}
+.card:hover .play-overlay {
+    display: initial;
+    transition: all .5s ease;
+}
+.songTitle{
+    font-size: 20px;
+    color: #ffffff;
+    height: 10%;
+    max-height: 10%;
+    /* padding-top: 10px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0px 15px;
+}
+.songArtist{
+    font-size: 12px;
+    color: #c4c4c4;
+    height: 20%;
+    max-height: 20%;
+    margin: 0px 15px 2px 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+.padding{
+    width: 200px;
+    height: 500px;
+}
